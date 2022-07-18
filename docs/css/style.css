@@ -88,6 +88,10 @@ meter {
   -webkit-user-drag: element;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
@@ -250,34 +254,12 @@ h6 {
   }
 }
 
-.overline {
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.9rem;
-  letter-spacing: 1rem;
-}
-@media screen and (min-width: 80rem) {
-  .overline {
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.9rem;
-    letter-spacing: 1rem;
-  }
-}
-@media screen and (min-width: 110rem) {
-  .overline {
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.9rem;
-    letter-spacing: 1rem;
-  }
-}
-
 .sub-title {
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 2.5rem;
   letter-spacing: 0.1rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 80rem) {
   .sub-title {
@@ -342,24 +324,8 @@ h6 {
   }
 }
 
-.nav-icon--hamburger {
-  height: 15px;
-  width: 16px;
-}
-.nav-icon--cart {
-  height: 23px;
-  width: 20px;
-}
-
-.main {
-  height: 600px;
-  width: 400px;
-  background-image: url(../images/home/mobile/image-header.jpg);
-  background-size: cover;
-}
-
 .icon-arrow {
-  height: 10px;
+  height: 11px;
   width: 8px;
 }
 
@@ -376,4 +342,354 @@ h6 {
 .instagram {
   height: 24px;
   width: 24px;
+}
+
+header,
+footer {
+  background-color: #101010;
+}
+
+.button {
+  width: 16rem;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button--main {
+  background-color: #D87D4A;
+  color: #FFFFFF;
+  border: 2px solid #D87D4A;
+}
+.button--main:hover {
+  background-color: #FBAF85;
+  border: 2px solid #FBAF85;
+}
+.button--featured {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #000000;
+}
+.button--featured--main {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 2px solid #000000;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 2rem 1.2rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  width: 100%;
+}
+.navbar .nav-icon {
+  cursor: pointer;
+}
+.navbar .nav-icon--hamburger {
+  height: 1.5rem;
+  width: 1.6rem;
+  justify-self: start;
+  align-self: center;
+}
+.navbar .nav-icon--cart {
+  height: 2rem;
+  width: 2.3rem;
+  justify-self: end;
+  align-self: center;
+}
+.navbar .logo {
+  justify-self: center;
+}
+
+.main {
+  height: 511px;
+  width: 100%;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  background-image: url(../images/home/mobile/image-header.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  grid-template-rows: 5fr 4fr 4fr 6fr;
+  align-items: center;
+  justify-items: center;
+}
+.main .overline {
+  color: #F1F1F1;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  letter-spacing: 1rem;
+  align-self: end;
+  margin-bottom: 1.6rem;
+}
+@media screen and (min-width: 80rem) {
+  .main .overline {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.9rem;
+    letter-spacing: 1rem;
+  }
+}
+@media screen and (min-width: 110rem) {
+  .main .overline {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.9rem;
+    letter-spacing: 1rem;
+  }
+}
+.main-title {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  align-self: start;
+}
+.main-body {
+  color: #F1F1F1;
+  text-align: center;
+  align-self: start;
+}
+.main-button {
+  align-self: start;
+}
+
+.shop {
+  background-color: #FFFFFF;
+  padding: 10rem 0rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-bottom: 5rem;
+  display: grid;
+}
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  height: 16.5rem;
+  background-color: #F1F1F1;
+  margin-bottom: 7.2rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  align-items: center;
+}
+.shop-card--headphones {
+  height: 15rem;
+  width: 15rem;
+  position: relative;
+  top: -5.8rem;
+  justify-self: center;
+}
+.shop-card--speakers {
+  height: 15rem;
+  width: 15rem;
+  position: relative;
+  top: -5.8rem;
+  justify-self: center;
+}
+.shop-card--earphones {
+  height: 15rem;
+  width: 15rem;
+  position: relative;
+  top: -5.8rem;
+  justify-self: center;
+}
+.shop-title {
+  position: relative;
+  top: -5.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+.shop-link {
+  display: flex;
+  width: 5.7rem;
+  color: hsla(0deg, 0%, 0%, 0.5);
+  position: relative;
+  top: -5.8rem;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.shop-link > svg {
+  margin-left: 1rem;
+}
+
+.featured {
+  background-color: #FFFFFF;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-bottom: 12rem;
+}
+.featured--main {
+  background-color: #D87D4A;
+  background-image: url("../images/home/desktop/pattern-circles.png");
+  background-position: center -128px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+  padding-top: 6.4rem;
+  margin-bottom: 2.4rem;
+}
+.featured--main-image {
+  width: 17.4rem;
+  height: 21.2rem;
+  margin-bottom: 4.4rem;
+}
+.featured--main-title {
+  color: #FFFFFF;
+  width: 8ch;
+  margin-bottom: 2.4rem;
+}
+.featured--main-description {
+  color: #FFFFFF;
+  font-weight: 500;
+  line-height: 2.5rem;
+  margin-bottom: 2.4rem;
+}
+.featured--secondary {
+  width: auto;
+  height: 32rem;
+  background-image: url(../images/home/mobile/image-speaker-zx7.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.featured--secondary-title {
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+.featured--secondary .button {
+  color: #000000;
+  font-weight: 700;
+  background-color: transparent;
+}
+.featured--last {
+  background-color: #F1F1F1;
+  width: 100%;
+  height: 20rem;
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+  margin-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.featured--last-title {
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+.featured--last-image {
+  background-image: url(../images/home/mobile/image-earphones-yx1.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 20rem;
+  border-radius: 0.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.informational {
+  background-color: #FFFFFF;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-bottom: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.informational-image {
+  width: 100%;
+  height: 30rem;
+  border-radius: 0.8rem;
+  margin-bottom: 4rem;
+}
+.informational-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+.informational-title .highlighted {
+  color: #D87D4A;
+}
+.informational-body {
+  font-weight: 500;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-bottom: 3.8rem;
+  border-top: 0.3rem linear-gradient(to right, black 30%, red 30% 90%, black 60%);
+}
+.footer .border-accent {
+  margin-bottom: 4.7rem;
+  width: 10.1rem;
+  height: 0.4rem;
+  background-color: #D87D4A;
+}
+.footer .logo {
+  margin-bottom: 4.8rem;
+}
+.footer .navigation {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  margin-bottom: 4.8rem;
+}
+.footer .navigation .footer-nav:not(:last-of-type) {
+  margin-bottom: 1.6rem;
+}
+.footer-body {
+  opacity: 0.5;
+  font-weight: 400;
+  margin-bottom: 4.8rem;
+}
+.footer .copyright {
+  opacity: 0.5;
+  font-weight: 700;
+  margin-bottom: 4.8rem;
+}
+.footer .social-icon {
+  cursor: pointer;
+  margin-right: 1.6rem;
+}
+.footer .social-icon--fb {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.footer .social-icon--tw {
+  height: 1.95rem;
+  width: 2.4rem;
+}
+.footer .social-icon--ig {
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-right: 0rem;
 }/*# sourceMappingURL=style.css.map */

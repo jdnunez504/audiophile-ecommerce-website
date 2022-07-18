@@ -17,6 +17,17 @@ $regular: 400;
 $tablet: rem(800);
 $desktop: rem(1100);
 
+$clr-primary: #D87D4A;
+$clr-secondary: #101010;
+$clr-neutral-1: #F1F1F1;
+$clr-neutral-2: #FAFAFA;
+$clr-primary-lightened: #FBAF85;
+$white: #FFFFFF;
+$black: #000000;
+
+html {
+    font-size: 62.5%;
+}
 
 body {
     font-family: 'Manrope', sans-serif;
@@ -24,6 +35,7 @@ body {
     font-weight: $medium;
     line-height: rem(25);
     letter-spacing: rem(0);
+
     @include min-width($tablet) {
         font-size: rem(15); 
         font-weight: $medium;
@@ -152,30 +164,12 @@ h6 {
     }
 }
 
-.overline {
-    font-size: rem(14);
-    font-weight: $regular;
-    line-height: rem(19);
-    letter-spacing: rem(10);
-    @include min-width($tablet) {
-        font-size: rem(14);
-        font-weight: $regular;
-        line-height: rem(19);
-        letter-spacing: rem(10);
-    }
-    @include min-width($desktop) {
-        font-size: rem(14);
-        font-weight: $regular;
-        line-height: rem(19);
-        letter-spacing: rem(10);
-    }
-}
-
 .sub-title {
     font-size: rem(13);
     font-weight: $bold;
     line-height: rem(25);
     letter-spacing: rem(1);
+    cursor: pointer;
     @include min-width($tablet) {
         font-size: rem(13);
         font-weight: $bold;
@@ -228,26 +222,9 @@ h6 {
     }
 }
 
-.nav-icon {
-    &--hamburger {
-        height: 15px;
-        width: 16px;
-    }
-    &--cart {
-        height: 23px;
-        width: 20px;
-    }
-}
-
-.main {
-    height: 600px;
-    width: 400px;
-    background-image: url(../images/home/mobile/image-header.jpg);
-    background-size: cover;
-}
 
 .icon-arrow {
-    height: 10px;
+    height: 11px;
     width: 8px;
 }
 
@@ -264,4 +241,363 @@ h6 {
 .instagram {
     height: 24px;
     width: 24px; 
+}
+
+header,
+footer {
+    background-color: $clr-secondary;
+}
+
+.button {
+    width: rem(160);
+    height: rem(48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: $bold;
+    cursor: pointer;
+    &--main {
+        background-color: $clr-primary;
+        color: $white;
+        border: 2px solid $clr-primary;
+        &:hover {
+            background-color: $clr-primary-lightened;
+            border: 2px solid $clr-primary-lightened;
+        }
+    }
+    &--featured {
+        background-color: transparent;
+        color: $black;
+        border: 2px solid $black;
+        &--main {
+            background-color: $black;
+            color: $white;
+            border: 2px solid $black;
+        }
+    }
+
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: rem(20) rem(12);
+    padding-left: rem(24);
+    padding-right: rem(24);
+    width: 100%;
+    .nav-icon {
+        cursor: pointer;
+        &--hamburger {
+            height: rem(15);
+            width: rem(16);
+            justify-self: start;
+            align-self: center;
+        }
+        &--cart {
+            height: rem(20);
+            width: rem(23);
+            justify-self: end;
+            align-self: center;
+        }
+    }
+    .logo {
+        justify-self: center;
+    }
+
+}
+
+.main {
+    height: 511px;
+    width: 100%;
+    padding-left: rem(24);
+    padding-right: rem(24);
+    background-image: url(../images/home/mobile/image-header.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: grid;
+    grid-template-rows: 5fr 4fr 4fr 6fr;
+    align-items: center;
+    justify-items: center;
+
+    .overline {
+        color: $clr-neutral-1;
+        text-transform: uppercase;
+        font-size: rem(14);
+        font-weight: $regular;
+        line-height: rem(19);
+        letter-spacing: rem(10);
+        align-self: end;
+        margin-bottom: rem(16);
+        @include min-width($tablet) {
+            font-size: rem(14);
+            font-weight: $regular;
+            line-height: rem(19);
+            letter-spacing: rem(10);
+        }
+        @include min-width($desktop) {
+            font-size: rem(14);
+            font-weight: $regular;
+            line-height: rem(19);
+            letter-spacing: rem(10);
+        }
+    }
+    &-title {
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        align-self: start;
+    }
+    &-body {
+        color: $clr-neutral-1;
+        text-align: center;
+        align-self: start;
+    }
+    &-button {
+        align-self: start;
+    }
+}
+
+.shop {
+    background-color: $white;
+    padding: rem(100) rem(0);
+    padding-left: rem(24);
+    padding-right: rem(24);
+    padding-bottom: rem(50);
+    display: grid;
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        height: rem(165);
+        background-color: $clr-neutral-1;
+        margin-bottom: rem(72);
+        border-radius: rem(8);
+        width: 100%;
+        align-items: center;
+        &--headphones {
+            height: rem(150);
+            width: rem(150);
+            position: relative;
+            top: rem(-58);
+            justify-self: center;
+        }
+        &--speakers {
+            height: rem(150);
+            width: rem(150);
+            position: relative;
+            top: rem(-58);
+            justify-self: center;
+        }
+        &--earphones {
+            height: rem(150);
+            width: rem(150);
+            position: relative;
+            top: rem(-58);
+            justify-self: center;
+        }
+    }
+    &-title {
+        position: relative;
+        top: rem(-58);
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: rem(16);
+    }
+    &-link {
+        display: flex;
+        width: rem(57);
+        color: hsla(0, 0%, 0%, 0.50);
+        position: relative;
+        top: rem(-58);
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        & > svg {
+            margin-left: rem(10);
+        }
+    }
+}
+.featured {
+    background-color: $white;
+    padding-left: rem(24);
+    padding-right: rem(24);
+    padding-bottom: rem(120);
+    &--main {
+        background-color: $clr-primary;
+        background-image: url("../images/home/desktop/pattern-circles.png");
+        background-position: center -128px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: rem(600);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: rem(8);
+        padding: rem(24);
+        padding-top: rem(64);
+        margin-bottom: rem(24);
+        &-image {
+            width: rem(174);
+            height: rem(212);
+            margin-bottom: rem(44);
+        }
+        &-title {
+            color: $white;
+            width: 8ch;
+            margin-bottom: rem(24);
+        }
+        &-description {
+            color: $white;
+            font-weight: $medium;
+            line-height: rem(25);
+            margin-bottom: rem(24);
+        }
+    }
+    &--secondary {
+        width: auto;
+        height: rem(320);
+        background-image: url(../images/home/mobile/image-speaker-zx7.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: rem(8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: rem(24);
+        margin-bottom: rem(24);
+        &-title {
+            color: $black;
+            text-transform: uppercase;
+            margin-bottom: rem(32);
+        }
+        .button {
+            color: $black;
+            font-weight: $bold;
+            background-color: transparent;
+            
+        }
+    }
+    
+    &--last {
+        background-color: $clr-neutral-1;
+        width: 100%;
+        height: rem(200);
+        border-radius: rem(8);
+        padding: rem(24);
+        margin-bottom: rem(0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-title {
+            text-transform: uppercase;
+            margin-bottom: rem(32);
+        }
+        &-image {
+            background-image: url(../images/home/mobile/image-earphones-yx1.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: rem(200);
+            border-radius: rem(8);
+            margin-bottom: rem(24);
+        }
+    }
+}
+
+.informational {
+    background-color: $white;
+    padding-left: rem(24);
+    padding-right: rem(24);
+    padding-bottom: rem(120);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &-image {
+        width: 100%;
+        height: rem(300);
+        border-radius: rem(8);
+        margin-bottom: rem(40);
+    }
+    &-title {
+        text-transform: uppercase;
+        font-weight: $bold;
+        margin-bottom: rem(32);
+        .highlighted {
+            color: $clr-primary;
+        }
+    }
+    &-body {
+        font-weight: $medium;
+        color: $black;
+        opacity: 0.5;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $white;
+    padding-left: rem(24);
+    padding-right: rem(24);
+    padding-bottom: rem(38);
+    border-top: rem(3) linear-gradient(to right, black 30%, red 30% 90%, black 60%);
+    .border-accent {
+        margin-bottom: rem(47);
+        width: rem(101);
+        height: rem(4);
+        background-color: $clr-primary;
+    }
+    .logo {
+        margin-bottom: rem(48);
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        margin-bottom: rem(48);
+        .footer-nav:not(:last-of-type) {
+            margin-bottom: rem(16);
+        }
+    }
+    &-body {
+        opacity: 0.5;
+        font-weight: $regular;
+        margin-bottom: rem(48);
+    }
+    .copyright {
+        opacity: 0.5;
+        font-weight: $bold;
+        margin-bottom: rem(48);
+    }
+    .social-icon {
+        cursor: pointer;
+        margin-right: rem(16);
+        
+        &--fb {
+            height: rem(24);
+            width: rem(24);
+            // justify-self: start;
+            // align-self: center;
+        }
+        &--tw {
+            height: rem(19.5);
+            width: rem(24);
+            // justify-self: end;
+            // align-self: center;
+        }
+        &--ig {
+            height: rem(24);
+            width: rem(24);
+            margin-right: rem(0);
+            // justify-self: end;
+            // align-self: center;
+        }
+    }
 }
