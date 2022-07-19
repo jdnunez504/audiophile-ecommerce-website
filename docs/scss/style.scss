@@ -14,7 +14,7 @@ $bold: 700;
 $medium: 500;
 $regular: 400;
 
-$tablet: rem(800);
+$tablet: rem(720);
 $desktop: rem(1100);
 
 $clr-primary: #D87D4A;
@@ -520,6 +520,9 @@ footer {
     &-image {
         width: 100%;
         height: rem(300);
+        background-image: url("../images/shared/desktop/image-best-gear.jpg");
+        background-position: center;
+        background-size: cover;
         border-radius: rem(8);
         margin-bottom: rem(40);
     }
